@@ -1,0 +1,62 @@
+/* Import Bootstrap styles */
+@import '~bootstrap/scss/bootstrap';
+
+/* Custom styles for the quote machine app */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.quote-container {
+  max-width: 600px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #333;
+}
+
+.author {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+button {
+  background-color: #b3fdbb;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:nth-child(2) {
+    background-color: #1da1f2; // Twitter color
+  }
+
+  &:nth-child(3) {
+    background-color: #1877f2; // Facebook color
+  }
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 400px;
+}
