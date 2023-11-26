@@ -1,6 +1,6 @@
-@import '~bootstrap/scss/bootstrap';
+@import "bootstrap";
 
-.App {
+#quote-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,6 +10,9 @@
 }
 
 .quote-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 600px;
   text-align: center;
   background-color: #fff;
@@ -17,6 +20,7 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  position: relative;
 }
 
 .quote {
@@ -31,7 +35,38 @@
   color: #555;
 }
 
-button {
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  bottom: 0;
+  z-index: 3;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.icon {
+  transition: background-color 0.3s ease;
+  background-color: #1da1f2;
+  z-index: 1;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+#new-quote {
   background-color: #b3fdbb;
   color: #fff;
   border: none;
@@ -39,21 +74,8 @@ button {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  &:nth-child(2) {
-    background-color: #1da1f2; // Twitter color
-  }
-
-  &:nth-child(3) {
-    background-color: #1877f2; // Facebook color
-  }
 
   &:hover {
     background-color: #0056b3;
   }
-}
-.button-container {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  max-width: 400px;
 }
